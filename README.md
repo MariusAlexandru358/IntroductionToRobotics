@@ -28,7 +28,7 @@ This assignment focuses on controlling each channel (Red, Green, and Blue) of  a
 Use a separate potentiometer for controlling each color of the RGB LED: Red, Green and Blue. The control must leverage digital electronics. Specifically, read the potentiometer’s value with Arduino and then write a mapped value to the LED pins.
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg?w=50%&h=50%)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/jgkgB0jxtuw" target="_blank">youtube link here</a>
