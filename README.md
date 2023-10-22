@@ -31,7 +31,7 @@ Use a separate potentiometer for controlling each color of the RGB LED: Red, Gre
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg?raw=true)
 
 ### Video showcasing functionality
-[![https://youtu.be/jgkgB0jxtuw](https://img.youtube.com/vi/jgkgB0jxtuw/hqdefault.jpg)](https://youtu.be/jgkgB0jxtuw?target=”_blank”)
+<a href="https://youtu.be/jgkgB0jxtuw" target="_blank">youtube link here</a>
 
 ##
 
