@@ -34,7 +34,7 @@ Use a separate potentiometer for controlling each color of the RGB LED: Red, Gre
 This is a straightforward task. All we have to do is read the values from the potentiometers (these are analog values), map them to the 0-255 interval, and write the resulting value to the LED pin. Of course, each potentiometer corresponds to one color of the RGB LED.
 
 ### Electrical scheme
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.jpg)
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg)
