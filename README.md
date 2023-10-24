@@ -16,16 +16,25 @@ For each homework assignment I've compiled the clear task requirements and/or de
 # Homework
 
 ## Homework #1 - RGB
-
 This assignment focuses on controlling each channel (Red, Green, and Blue) of  an  RGB  LED  using  individual  potentiometers.
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/LedRGB)
 
 ### Components:
-- RGB LED
+- Arduino UNO
+- Breadbord
+- RGB LED (1)
 - Potentiometers (3)
-- Resistors and wires as needed
+- 330&#x2126; Resistors (3)
+- Wires as needed
 
 ### Technical Task
-Use a separate potentiometer for controlling each color of the RGB LED: Red, Green and Blue. The control must leverage digital electronics. Specifically, read the potentiometer’s value with Arduino and then write a mapped value to the LED pins.
+Use a separate potentiometer for controlling each color of the RGB LED: Red, Green and Blue. The control must leverage digital electronics.
+
+### Breakdown
+This is a straightforward task. All we have to do is read the values from the potentiometers (these are analog values), map them to the 0-255 interval, and write the resulting value to the LED pin. Of course, each potentiometer corresponds to one color of the RGB LED.
+
+### Electrical scheme
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.jpg)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg)
