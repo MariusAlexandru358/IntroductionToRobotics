@@ -15,7 +15,12 @@ For each homework assignment I've compiled the clear task requirements and/or de
 
 # Homework
 
+<details>
+<summary>
+
 ## Homework #1 - RGB
+
+</summary><br>
 This assignment focuses on controlling each channel (Red, Green, and Blue) of  an  RGB  LED  using  individual  potentiometers.
 [Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/LedRGB)
 
@@ -42,10 +47,17 @@ This is a straightforward task. All we have to do is read the values from the po
 ### Video showcasing functionality
 <a href="https://youtu.be/jgkgB0jxtuw" target="_blank">youtube link here</a>
 
+</details>
 
+---
+
+<details>
+<summary>
 
 ## Homework #2 - Elevator Simulator
-This  assignment  involves  simulating  a  3-floor  elevator  control  system  usingLEDs, buttons, and a buzzer with Arduino.
+
+</summary><br>
+This assignment involves simulating a 3-floor elevator control system using LEDs, buttons, and a buzzer with Arduino.
 [Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/ElevatorSim)
 
 ### Components:
@@ -77,6 +89,62 @@ One way to implement this is by using the function millis() to get the timestamp
 
 ### Video showcasing functionality
 <a href="https://youtu.be/h7vUpx4tfUE" target="_blank">youtube link here</a>
+
+</details>
+
+---
+
+<details>
+<summary>
+
+## Homework #3 - 7 Segment Display Drawing
+
+</summary><br>
+This assignment involves using the joystick in order to control the position of the segment and ”draw” on the display. The movement between segments should be natural, meaning they should jump from the current position only to neighbors, but without passing through ”walls”.
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/Drawing_7SegmentDisplay)
+
+### Components:
+- Arduino UNO
+- Breadbord
+- 7-Segment-Display (1)
+- Joystick (1)
+- 330&#x2126; or 220&#x2126; Resistors (8)
+- Wires as needed
+
+### Technical Task
+The initial position should be on the DP. The current position always blinks (irrespective of the fact that the segment is on or off). Use the joystick to move from one position to neighbors (see table for corresponding movement). Short pressing the button toggles the segment state from ON to OFF or from OFF to ON. Long pressing the button resets the entire display by turning all the segments OFF and moving the current position to the decimal point.
+
+| Current segment | UP | DOWN | LEFT | RIGHT |
+| --------------- | -- | ---- | ---- | ----- |
+| **a**           |N/A |  g   |  f   |   b   |
+| **b**           | a  |  g   |  f   |  N/A  | 
+| **c**           | g  |  d   |  e   |  dp   |
+| **d**           | g  | N/A  |  e   |   c   | 
+| **e**           | g  |  d   | N/A  |   c   |
+| **f**           | a  |  g   | N/A  |   b   | 
+| **g**           | a  |  d   | N/A  |  N/A  |
+| **dp**          |N/A |  N/A |  c   |  N/A  | 
+
+### Breakdown
+This assignment can be broken down into multiple simpler tasks. 
+- **Input detection:** The push-button needs debouncing and to be able to also detect long pushes. For the movements on the joystick we will set thresholds it needs to pass in order to be registered.
+- **Calculating the next position and moving to it**
+- **Updating the blinking** of the selected LED
+- **Toggling the state** of a LED or **reseting** the display and position
+
+
+### Electrical scheme
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing_7SegmentDisplay/Drawing_7SegmentDisplay_Electrical.png)
+
+### Hardware Setup
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing_7SegmentDisplay/Drawing_7SegmentDisplay_Setup.jpg)
+
+### Video showcasing functionality
+<a href="https://youtu.be/JfM9QyAPTl4" target="_blank">youtube link here</a>
+
+</details>
+
+---
 
 
 
