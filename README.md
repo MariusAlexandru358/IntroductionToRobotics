@@ -39,7 +39,7 @@ Use a separate potentiometer for controlling each color of the RGB LED: Red, Gre
 ### Breakdown
 This is a straightforward task. All we have to do is read the values from the potentiometers (these are analog values), map them to the 0-255 interval, and write the resulting value to the LED pin. Of course, each potentiometer corresponds to one color of the RGB LED.
 
-### Electrical scheme
+### Electrical schematic
 ![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.png)
 
 ### Hardware Setup
@@ -83,7 +83,7 @@ Design a control system that simulates a 3-floor elevator using the Arduino plat
 ### Breakdown
 One way to implement this is by using the function millis() to get the timestamp of when a button push is confirmed by the debounce logic and then with the help of the same function we can calculate how much time has passed since that event. Let's say it takes 3 seconds for the elevator to move up a floor, then after 3000 milliseconds we simulate moving up to that floor by turning on the corresponding LED. We can apply the same logic for all the actions we must implement. 
 
-### Electrical scheme
+### Electrical schematic
 ![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimElectrical.png)
 
 ### Hardware Setup
@@ -136,7 +136,7 @@ This assignment can be broken down into multiple simpler tasks.
 - **Toggling the state** of a LED or **reseting** the display and position
 
 
-### Electrical scheme
+### Electrical schematic
 ![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing_7SegmentDisplay/Drawing_7SegmentDisplay_Electrical.png)
 
 ### Hardware Setup
