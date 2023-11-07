@@ -22,6 +22,7 @@ For each homework assignment I've compiled the clear task requirements and/or de
 
 </summary><br>
 This assignment focuses on controlling each channel (Red, Green, and Blue) of  an  RGB  LED  using  individual  potentiometers.
+
 [Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/LedRGB)
 
 ### Components:
@@ -58,6 +59,7 @@ This is a straightforward task. All we have to do is read the values from the po
 
 </summary><br>
 This assignment involves simulating a 3-floor elevator control system using LEDs, buttons, and a buzzer with Arduino.
+
 [Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/ElevatorSim)
 
 ### Components:
@@ -101,6 +103,7 @@ One way to implement this is by using the function millis() to get the timestamp
 
 </summary><br>
 This assignment involves using the joystick in order to control the position of the segment and ”draw” on the display. The movement between segments should be natural, meaning they should jump from the current position only to neighbors, but without passing through ”walls”.
+
 [Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/Drawing_7SegmentDisplay)
 
 ### Components:
