@@ -186,10 +186,10 @@ Workflow:
 - In order to implement an extra functionality, I've decided to use a vector for the memory. The first position will always be a starting position ("000.0") from which we can start counting again, while the following positions are the memory spaces for the saved lap times. This way, we can start a timer, count one or more laps, see the data, and count again without losing the previous laps. For a practical use, we can increase the memory size (the vector size). Of course, the Reset button when pressed while in the lap viewing mode still works as intended.
 
 ### Electrical schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer.png)
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Electrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Setup.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/cyFr2RE60oo" target="_blank">youtube link here</a>
