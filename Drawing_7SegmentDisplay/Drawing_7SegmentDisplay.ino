@@ -22,12 +22,12 @@ int verticalMoving = 0;
 int horizontalMoving = 0;
 
 
-//                             0, 1, 2, 3, 4, 5, 6, 7    indexes
-//                             a, b, c, d, e, f, g, DP   LEDs of the 7-digit-display
-volatile int state[segSize] = {0, 0, 0, 0, 0, 0, 0, 0};
-volatile int blinkState[segSize] = {0, 0, 0, 0, 0, 0, 0, 0};
-volatile int position = 7; 
-volatile int blinkPosition = 7;
+//                    0, 1, 2, 3, 4, 5, 6, 7    indexes
+//                    a, b, c, d, e, f, g, DP   LEDs of the 7-digit-display
+int state[segSize] = {0, 0, 0, 0, 0, 0, 0, 0};
+int blinkState[segSize] = {0, 0, 0, 0, 0, 0, 0, 0};
+int position = 7; 
+int blinkPosition = 7;
 
 const int readingMinThreshold = 350;
 const int readingMaxThreshold = 650;
@@ -39,9 +39,10 @@ const int blinkInterval = 200;
 unsigned long lastBlinkToggleTime = 0;
 unsigned long currentBlinkToggleTime = 0;
 
-const unsigned long debounceDelay = 50;
-const unsigned long pushDuration = 3000;
+const unsigned long debounceDelay = 20;
+const unsigned long longPushDuration = 2500;
 volatile bool possiblePress = false; // Indicates that a button press might have occurred
+volatile bool possibleLongPress = false; // Indicates that a long button press might have occurred
 volatile bool shouldStartCounter = false; // Indicates the need to start debounce counter
 bool ledState = LOW; // Current state of the LED (ON/OFF)
 bool buttonState = HIGH; // The previous state of the button (HIGH when not pressed due to INPUT_PULLUP)
@@ -71,39 +72,43 @@ void loop() {
 
 void inputDetection() {
   // Check if a possible button press was detected
-  if(possiblePress) {
+  if(possiblePress || possibleLongPress) {
     // Start the debounce counter if needed
     if (shouldStartCounter) {
       lastDebounceTime = millis();
       shouldStartCounter = false;
     }
     // If the debounce period has elapsed
-    if ((millis() - lastDebounceTime) > debounceDelay) {
+    if ((millis() - lastDebounceTime) > debounceDelay && possiblePress) {
       // Read the current state of the button
       buttonReading = digitalRead(pinSW);
       // If the button state has changed (i.e., if it was not a false press)
       if (buttonReading != buttonState) {
         // Toggle the LED state if the button was truly pressed (read as LOW due to INPUT_PULLUP)
         if (buttonReading == LOW) {
-          // ledState = !ledState;
-          // digitalWrite(ledPin, ledState);
           state[position] = !state[position];
-
-          if (millis() - lastDebounceTime > pushDuration * 1000) {
-            Serial.println(6666);
-            for (int i = 0; i < segSize; i++) {
-              state[i] = 0;
-              // blinkState[i] = state[i];
-            }
-            position = 7;
-            blinkPosition = 7;
-          }  
-          writeState();
         }
       }  // If the states match, it was a false alarm due to noise
       // Reset the possiblePress flag
       possiblePress = false;
     }
+    if (millis() - lastDebounceTime > longPushDuration) {
+      buttonReading = digitalRead(pinSW);
+      if (buttonReading != buttonState) {
+        // Reset the display if the button was truly long-pressed (read as LOW due to INPUT_PULLUP)
+        if (buttonReading == LOW) {
+          Serial.println(6666);
+          for (int i = 0; i < segSize; i++) {
+            state[i] = 0;
+            blinkState[i] = state[i];
+          }
+          position = 7;
+        }
+      }  // If the states match, it was a false alarm due to noise
+      // Reset the possibleLongPress flag
+      possibleLongPress = false;
+    }
+
   }
 
   // Directional readings:
@@ -344,6 +349,7 @@ void writeState() {
 // Interrupt service routine (ISR) executed when the button is pressed
 void handleInterrupt() {
   possiblePress = true; // Indicate that a button press might have occurred
+  possibleLongPress = true; // Indicate that a long button press might have occurred
   shouldStartCounter = true; // Indicate the need to start the debounce counter
 }
 
