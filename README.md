@@ -149,6 +149,55 @@ This assignment can be broken down into multiple simpler tasks.
 
 ---
 
+<details>
+<summary>
+
+## Homework #4 - Stopwatch Timer
+
+</summary><br>
+Using the 4 digit 7 segment display and 3 buttons, implement a stopwatch timer that counts in 10ths of a second and has a save lap functionality (similar to most basic stopwatch functions on most phones).
+
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/StopwatchTimer)
+
+### Components:
+- Arduino UNO
+- Breadbord
+- SN74HC595N Shift Register (1)
+- 4-Digit 7-Segment-Display (1)
+- 330&#x2126; or 220&#x2126; Resistors (8)
+- Pushbuttons (3)
+- Wires as needed
+
+### Technical Task
+The starting value of the 4 digit 7-segment display should be "000.0". The buttons should have the following functionalities:
+- Button 1: Start / Pause
+- Button 2: Reset (if paused). Reset saved laps (if in lap viewing mode)
+- Button 3: Save lap (if counting). Cycle through last saved laps (up to 4 laps)
+
+Workflow:
+1. Display shows "000.0" When pressing the **Start** button, the timer should start.
+2. During the counting, each time you press the lap button, that value should be saved, up to 4 laps; pressing the 5th time should override the first saved one. Pressing the Reset button while counting should do nothing. Pressing the Pause button should stop the timer.
+3. In **Pause** Mode, the Lap button shouldnt work anymore. Pressing the Reset button should reset the timer to "000.0".
+4. After a reset, the Lap button should cycle through the saved lap times. Pressing it continuosly should cycle through the memory continously. Pressing the reset button while in this state should reset everything and set the timer back to "000.0".
+
+### Breakdown
+- In order to display the current time, we will cycle through the display digits and write the values for each digit to the shift register in serial mode, which will then send it to the 7-segment display. Because we can turn the LEDs on and off faster than your eyes can "see", we will creat the ilusion of a 4 digit number. Multiplexing logic is used to select which digit of the display we are writing on.
+- The logic behind the buttons is relatively simple, it can be done with a few flags. Each button needs debouncing of course.
+- In order to implement an extra functionality, I've decided to use a vector for the memory. The first position will always be a starting position ("000.0") from which we can start counting again, while the following positions are the memory spaces for the saved lap times. This way, we can start a timer, count one or more laps, see the data, and count again without losing the previous laps. For a practical use, we can increase the memory size (the vector size). Of course, the Reset button when pressed while in the lap viewing mode still works as intended.
+
+### Electrical schematic
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer.png)
+
+### Hardware Setup
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer.jpg)
+
+### Video showcasing functionality
+<a href="https://youtu.be/cyFr2RE60oo" target="_blank">youtube link here</a>
+
+</details>
+
+---
+
 
 
 
