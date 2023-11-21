@@ -198,6 +198,64 @@ Workflow:
 
 ---
 
+<details>
+<summary>
+
+## Homework #5 - Pseudo-Smart Environment Monitor and Logger
+
+</summary><br>
+The system utilizes various sensors to gather environmental data, logs this data into EEPROM, and provides both visual feedback via an RGB LED and user interaction through a Serial Menu. The project focuses on integrating sensor readings, memory management, Serial Communication and the general objective of building a menu.
+
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/PseudoSmartEnvironmentMonitorAndLogger)
+
+### Components:
+- Arduino UNO
+- Breadbord
+- (HC-SR04) Ultrasonic Sensor (1)
+- Light-Dependent Rezistor / Photocell (1)
+- RGB LED
+- 330&#x2126; or 220&#x2126; Resistors (3)
+- 330&#x2126; Resistor (1)
+- Wires as needed
+
+### Menu Structure
+1. Sensor Settings
+- Sensors Sampling Interval: prompt for a value between 1 and 10 seconds
+- Ultrasonic Alert Threshold: prompt for a threshold value 
+- LDR Alert Threshold: promt for a threshold value
+- Back
+2. Reset Logger Data: reset logged data
+- Yes
+- No
+3. System Status:
+- Current Sensor Readings: continuously print sensor readings
+- Current Sensor Settings: display the sampling rate and threshold values
+- Display Logged Data: display the last 10 sensor readings
+- Back
+4. RGB LED Control: 
+- Manual Color Control: set the RGB colors manually
+- LED: Toggle Automatic ON / OFF: toggle between the automatic mode (default colors) and custom mode (manually set colors)
+- Back
+
+### Breakdown
+- Implement the menu and navigation
+- Periodically read data from the sensors
+- Set the RGB display to provide visual feedback
+- Make sure all the extra menu options are implemented properly
+
+### Electrical schematic
+![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerElectrical.png)
+
+### Hardware Setup
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerSetup.jpg)
+
+### Video showcasing functionality
+<a href="https://youtu.be/fbS9zhjPbgM" target="_blank">youtube link here</a>
+
+</details>
+
+---
+
 
 
 
