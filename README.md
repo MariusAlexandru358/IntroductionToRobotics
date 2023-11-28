@@ -40,10 +40,10 @@ Use a separate potentiometer for controlling each color of the RGB LED: Red, Gre
 This is a straightforward task. All we have to do is read the values from the potentiometers (these are analog values), map them to the 0-255 interval, and write the resulting value to the LED pin. Of course, each potentiometer corresponds to one color of the RGB LED.
 
 ### Electrical Schematic
-![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBElectrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGB.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/jgkgB0jxtuw" target="_blank">youtube link here</a>
@@ -87,7 +87,7 @@ One way to implement this is by using the function millis() to get the timestamp
 ![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimElectrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimSetup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSim.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/h7vUpx4tfUE" target="_blank">youtube link here</a>
@@ -137,10 +137,10 @@ This assignment can be broken down into multiple simpler tasks.
 
 
 ### Electrical Schematic
-![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplay_Electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplayElectrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplay_Setup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplay.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/JfM9QyAPTl4" target="_blank">youtube link here</a>
@@ -186,10 +186,10 @@ Workflow:
 - In order to implement an extra functionality, I've decided to use a vector for the memory. The first position will always be a starting position ("000.0") from which we can start counting again, while the following positions are the memory spaces for the saved lap times. This way, we can start a timer, count one or more laps, see the data, and count again without losing the previous laps. For a practical use, we can increase the memory size (the vector size). Of course, the Reset button when pressed while in the lap viewing mode still works as intended.
 
 ### Electrical schematic
-![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimerElectrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Setup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/cyFr2RE60oo" target="_blank">youtube link here</a>
@@ -247,7 +247,7 @@ The system utilizes various sensors to gather environmental data, logs this data
 ![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerElectrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerSetup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLogger.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/fbS9zhjPbgM" target="_blank">youtube link here</a>
@@ -292,13 +292,13 @@ The basic idea is to generate walls on the map (50%-75% of the map) and then the
 - Bombs: Button presses with different thresholds. Added a LED for visual confirmation.
 
 ### Electrical schematic
-![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Mini8x8LEDMatrixGame/Mini8x8LEDMatrixGame.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Mini8x8LEDMatrixGame/Mini8x8LEDMatrixGameElectrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Mini8x8LEDMatrixGame/Mini8x8LEDMatrixGame.jpg)
 
 ### Video showcasing functionality
-<a href="" target="_blank">youtube link here</a>
+<a href="https://youtu.be/vjbd250-MIg" target="_blank">youtube link here</a>
 
 </details>
 
