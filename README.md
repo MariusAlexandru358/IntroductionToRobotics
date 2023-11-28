@@ -40,7 +40,7 @@ Use a separate potentiometer for controlling each color of the RGB LED: Red, Gre
 This is a straightforward task. All we have to do is read the values from the potentiometers (these are analog values), map them to the 0-255 interval, and write the resulting value to the LED pin. Of course, each potentiometer corresponds to one color of the RGB LED.
 
 ### Electrical Schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/electrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LedRGB/LedRGBsetup.jpg)
@@ -84,7 +84,7 @@ Design a control system that simulates a 3-floor elevator using the Arduino plat
 One way to implement this is by using the function millis() to get the timestamp of when a button push is confirmed by the debounce logic and then with the help of the same function we can calculate how much time has passed since that event. Let's say it takes 3 seconds for the elevator to move up a floor, then after 3000 milliseconds we simulate moving up to that floor by turning on the corresponding LED. We can apply the same logic for all the actions we must implement. 
 
 ### Electrical Schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimElectrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimElectrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/ElevatorSim/ElevatorSimSetup.jpg)
@@ -104,7 +104,7 @@ One way to implement this is by using the function millis() to get the timestamp
 </summary><br>
 This assignment involves using the joystick in order to control the position of the segment and ”draw” on the display. The movement between segments should be natural, meaning they should jump from the current position only to neighbors, but without passing through ”walls”.
 
-[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/Drawing_7SegmentDisplay)
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/Drawing7SegmentDisplay)
 
 ### Components:
 - Arduino UNO
@@ -137,10 +137,10 @@ This assignment can be broken down into multiple simpler tasks.
 
 
 ### Electrical Schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing_7SegmentDisplay/Drawing_7SegmentDisplay_Electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplay_Electrical.png)
 
 ### Hardware Setup
-![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing_7SegmentDisplay/Drawing_7SegmentDisplay_Setup.jpg)
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Drawing7SegmentDisplay/Drawing7SegmentDisplay_Setup.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/JfM9QyAPTl4" target="_blank">youtube link here</a>
@@ -186,7 +186,7 @@ Workflow:
 - In order to implement an extra functionality, I've decided to use a vector for the memory. The first position will always be a starting position ("000.0") from which we can start counting again, while the following positions are the memory spaces for the saved lap times. This way, we can start a timer, count one or more laps, see the data, and count again without losing the previous laps. For a practical use, we can increase the memory size (the vector size). Of course, the Reset button when pressed while in the lap viewing mode still works as intended.
 
 ### Electrical schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Electrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Electrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/StopwatchTimer/StopwatchTimer_Setup.jpg)
@@ -244,13 +244,61 @@ The system utilizes various sensors to gather environmental data, logs this data
 - Make sure all the extra menu options are implemented properly
 
 ### Electrical schematic
-![Electrical Circuit Scheme](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerElectrical.png)
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerElectrical.png)
 
 ### Hardware Setup
 ![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/PseudoSmartEnvironmentMonitorAndLogger/PseudoSmartEnvironmentMonitorAndLoggerSetup.jpg)
 
 ### Video showcasing functionality
 <a href="https://youtu.be/fbS9zhjPbgM" target="_blank">youtube link here</a>
+
+</details>
+
+---
+
+<details>
+<summary>
+
+## Homework #6 - Mini 8x8 LED Matrix Game
+
+</summary><br>
+The purpose of this assignment is to create a basic game played on an 8x8 LED Matrix. 
+
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/Mini8x8LEDMatrixGame)
+
+### Components:
+- Arduino UNO
+- Breadbord
+- Joystick
+- 8x8 LED Matrix
+- MAX7219 (Matrix Driver)
+- Resistor for the Matrix Driver (10k&#x2126; to 200k&#x2126;): I used 2 22k&#x2126; Resistors
+- LED
+- 330&#x2126; or 220&#x2126; Resistors (1)
+- 1 electrolytic capacitor of 10 μF
+- 1 ceramic capacitor of 104 pF
+- Wires as needed
+
+### Technical Task
+The game must have at least 3 types of elements:
+- Player (blinks slowly)
+- Bombs or Bullets (blink fast)
+- Walls (don't blink)
+The basic idea is to generate walls on the map (50%-75% of the map) and then the player moves around and destroys them. The control must be smooth and walls should not be generated on top of the player.
+
+### Breakdown
+- Player movement: joystick input
+- Wall generation: a function that uses the built-in function [random()](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/) 
+- Bombs: Button presses with different thresholds. Added a LED for visual confirmation.
+
+### Electrical schematic
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Mini8x8LEDMatrixGame/Mini8x8LEDMatrixGame.png)
+
+### Hardware Setup
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/Mini8x8LEDMatrixGame/Mini8x8LEDMatrixGame.jpg)
+
+### Video showcasing functionality
+<a href="" target="_blank">youtube link here</a>
 
 </details>
 
