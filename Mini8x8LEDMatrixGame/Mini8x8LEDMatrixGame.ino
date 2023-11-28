@@ -48,6 +48,8 @@ byte matrixByte[matrixSize] = {
   B00000000,
   B00000000
 }; // Array representing each row of the LED matrix as a byte
+const float minFillPercentage = 0.5;
+const float maxFillPercentage = 0.75;
 const short startPositionSize = 1; // Size of the start position square, located in the top left corner. Recommended values: 0, 1 or 2
 
 bool blinkState = 1;
@@ -205,8 +207,8 @@ void loop() {
 
 void generateMap() {
   // Calculate the number of true values to fill between 60% and 85% of the matrix
-  int minTrueCount = 0.5 * matrixSize * matrixSize;
-  int maxTrueCount = 0.75 * matrixSize * matrixSize;
+  int minTrueCount = minFillPercentage * matrixSize * matrixSize;
+  int maxTrueCount = maxFillPercentage * matrixSize * matrixSize;
   int trueCount = random(minTrueCount, maxTrueCount + 1) - pow(2, startPositionSize);
 
   // Set true values randomly
