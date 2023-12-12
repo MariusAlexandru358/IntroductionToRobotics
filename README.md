@@ -304,6 +304,69 @@ The basic idea is to generate walls on the map (50%-75% of the map) and then the
 
 ---
 
+<details>
+<summary>
+
+## Homework #7 - 8x8 LED Matrix Game and LCD Menu (Checkpoint)
+
+</summary><br>
+The purpose of this assignment is to make progress on the Matrix Project. (link and project not up yet, coming soon :D)
+For now, I've used the mini game from the previous assignment as the gameplay.
+
+[Assignment folder](https://github.com/MariusAlexandru358/IntroductionToRobotics/tree/main/8x8LEDMatrixGameAndLCDMenu)
+
+### Components:
+- Arduino UNO
+- Breadbord
+- Joystick
+- 8x8 LED Matrix
+- MAX7219 (Matrix Driver)
+- Resistor for the Matrix Driver (10k&#x2126; to 200k&#x2126;): I used 2 22k&#x2126; Resistors
+- LED
+- 330&#x2126; or 220&#x2126; Resistors (1)
+- 1 electrolytic capacitor of 10 μF
+- 1 ceramic capacitor of 104 pF
+- 16x2 LCD
+- potentiometer
+- 330&#x2126; or 220&#x2126; Resistors (1)
+- Wires as needed
+
+### Technical Task
+After booting up, a greeting message should be shown for a few moments, before entering the main menu.
+Menu Structure:
+1. Play
+2. Hihghscore (not required for this checkpoint)
+3. Settings
+- LCD Brightness 
+- Matrix Brightness 
+- Sound (not required for this checkpoint)
+4. About
+5. How to play (not required for this checkpoint)
+During gameplay, relevant information must be displayed on the LCD.
+After the game ends, an end message and the score should be displayed on the LCD, before returning to the main menu with user input.
+
+### Breakdown
+- The **Play** option leads to the game itself. The game starts and the input is now used to play the game instead of navigating through the menu options
+- The **Settings** option leads to its submenu.
+- The **LCD Brightness** option leads to a screen which allows the user to select between 10 levels of intensity. The prefered option is then applied and saved to EEPROM. 
+- The **Matrix Brightness** option leads to a screen which allows the user to select between 10 levels of intensity. The prefered option is then applied and saved to EEPROM. 
+- The **About** option displays the game name and creator (and also a the link to this github account :D)
+While playing the game, the user can see how many remaining targets are there and how much time has passed since starting playing. The user's goal is to win as fast as possible (and show off his/her record to friends and family should it be among the best ever).
+After the game ends, a *Congratulations!* message is displayed on the LCD, along with the time it took to win, before returning to the main menu with user input.
+
+### Electrical schematic
+![Electrical Circuit Schematic](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/8x8LEDMatrixGameAndLCDMenu/8x8LEDMatrixGameAndLCDMenuElectrical.png)
+
+### Hardware Setup
+![Setup Image](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/8x8LEDMatrixGameAndLCDMenu/8x8LEDMatrixGameAndLCDMenu.jpg)
+
+### Video showcasing functionality
+<a href="https://youtu.be/jS-QKgulePE" target="_blank">youtube link here</a>
+
+</details>
+
+---
+
 
 
 
