@@ -415,7 +415,7 @@ The chassis was designed and built by our team, using a material similar to carb
 ### Functionality
 For the grading we had 3 tries, meaning the robot had to complete 3 consecutive laps on the final track. In order to get the maximum grade, the track had to be completed in less than 20 seconds. In the video linked below is displayed the first lap, where the robot completed the track in aprox. 17 seconds. On the second lap, the robot completed the track faster, scoring a time of aprox. 16 seconds.
 
-[Watch the video](https://www.youtube.com/shorts/_sgrDiwM9yc) to see this functionality in action.
+[Watch the video](https://www.youtube.com/shorts/_sgrDiwM9yc) to see this functionality in action and then [our best lap](https://youtube.com/shorts/CuKk1tvIPh8).
 
 ### [Code](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LineFollower/lineF.ino)
 
