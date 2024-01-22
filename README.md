@@ -404,12 +404,12 @@ The motors' speed is dynamically controlled using a PID (Proportional-Integral-D
 ### Setup
 The chassis was designed and built by our team, using a material similar to carboard which can be found in any art shop. The board was cut as to fit all the components on it. We also built a small "pocket" for the battery, in order to insert/remove it easily.
 <p align="center">
-  <img src="LineFollower/lineF/chassis.jpeg" alt="Chassis" width="500">
+  <img src="LineFollower/chassis.jpeg" alt="Chassis" width="500">
 </p>
 
 ### Electrical Schematic
 <p align="center">
-  <img src="LineFollower/lineF/lineFollowerElectrical.png" alt="Circuit Diagram" width="500">
+  <img src="LineFollower/lineFollowerElectrical.png" alt="Circuit Diagram" width="500">
 </p>
 
 ### Functionality
@@ -417,7 +417,7 @@ For the grading we had 3 tries, meaning the robot had to complete 3 consecutive 
 
 [Watch the video](https://www.youtube.com/shorts/_sgrDiwM9yc) to see this functionality in action.
 
-### [Code](https://github.com/MariusAlexandru358/LineFollower/blob/main/lineF/lineF.ino)
+### [Code](https://github.com/MariusAlexandru358/IntroductionToRobotics/blob/main/LineFollower/lineF.ino)
 
 </details>
 
